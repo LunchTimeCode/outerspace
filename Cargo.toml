@@ -1,0 +1,26 @@
+[package]
+version = "0.1.0"
+name = "outerspace"
+edition = "2024"
+authors = [ "Silen Celeste Locatelli, LunchTimeCode"]
+
+[dependencies]
+rocket ={version = "0.5.0", features = ["json", "http2", "uuid"]}
+maud = {version = "0.27"}
+static_hero_icons = "0.3.0"
+include_directory = "0.1.1"
+dotenvy = "0.15.7"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+chrono = { version = "0.4.27", default-features = false, features = ["serde"] }
+uuid = { version = "1.4", features = ["serde", "v4"] }
+jsonwebtoken = { version = "8.3.0", default-features = false }
+email_address = "0.2.4"
+thiserror = "1.0"
+bytes = "1.4"
+
+[dependencies.reqwest]
+version = "0.12.12"
+default-features = false
+features = ["http2", "charset", "rustls-tls", "json", "gzip", "brotli", "deflate"]
